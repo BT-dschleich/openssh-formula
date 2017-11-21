@@ -23,6 +23,13 @@ Installs the ``openssh`` server package and service.
 
 Manages SSH certificates for users.
 
+``openssh.auth_map``
+-----------
+
+Same functionality as openssh.auth but with a simplified Pillar syntax.
+Plays nicely with `Pillarstack
+<https://docs.saltstack.com/en/latest/ref/pillar/all/salt.pillar.stack.html>`_.
+
 ``openssh.banner``
 ------------------
 
@@ -65,6 +72,7 @@ setup those functions through pillar::
       public_ssh_host_keys:
         mine_function: cmd.run
         cmd: cat /etc/ssh/ssh_host_*_key.pub
+        python_shell: True
       public_ssh_hostname:
         mine_function: grains.get
         key: id

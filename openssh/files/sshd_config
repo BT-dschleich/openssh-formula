@@ -161,7 +161,7 @@
 {{- option('Banner') -}}
 
 {#- Allow client to pass locale environment variables -#}
-{{- option('AcceptEnv') -}}
+#{{- option('AcceptEnv') -}}
 
 {{- option('Subsystem') -}}
 

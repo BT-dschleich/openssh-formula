@@ -160,10 +160,10 @@
 {{- option('MaxStartups') -}}
 {{- option('Banner') -}}
 
+{{- option('Subsystem') -}}
+
 {#- Allow client to pass locale environment variables -#}
 #{{- option('AcceptEnv') -}}
-
-{{- option('Subsystem') -}}
 
 {% if not salt['grains.get']('os') == 'OpenBSD' -%}
 {#- Set this to 'yes' to enable PAM authentication, account processing, -#}

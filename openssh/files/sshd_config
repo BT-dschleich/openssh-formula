@@ -162,9 +162,6 @@
 
 {{- option('Subsystem') -}}
 
-{#- Allow client to pass locale environment variables -#}
-#{{- option('AcceptEnv') -}}
-
 {% if not salt['grains.get']('os') == 'OpenBSD' -%}
 {#- Set this to 'yes' to enable PAM authentication, account processing, -#}
 {#- and session processing. If this is enabled, PAM authentication will -#}

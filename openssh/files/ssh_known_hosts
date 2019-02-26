@@ -64,8 +64,8 @@
 {%- endfor -%}
 
 {#- Loop over targetted minions -#}
-{%- set host_keys = salt['mine.get'](target, keys_function, expr_form=expr_form) -%}
-{%- set host_names = salt['mine.get'](target, hostname_function, expr_form=expr_form) -%}
+{%- set host_keys = salt['mine.get'](target, keys_function, tgt_type=expr_form) -%}
+{%- set host_names = salt['mine.get'](target, hostname_function, tgt_type=expr_form) -%}
 {%- for host, keys in host_keys|dictsort -%}
 {{ known_host_entry(host, host_names, keys) }}
 {%- endfor -%}
